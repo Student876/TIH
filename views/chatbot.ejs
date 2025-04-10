@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<h1>AI Chatbot</h1>
+<p>Ask your travel questions and get instant AI-powered answers.</p>
+
+<div class="chat-container">
+  <div class="chat-box" id="chat-box">
+    <p><strong>Bot:</strong> Hello! How can I help you plan your trip today?</p>
+  </div>
+  <form id="chat-form">
+    <input type="text" id="user-message" placeholder="Type your message..." />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('chat-form');
+  const chatBox = document.getElementById('chat-box');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = document.getElementById('user-message');
+    const msg = input.value;
+    chatBox.innerHTML += `<p><strong>You:</strong> ${msg}</p>`;
+    chatBox.innerHTML += `<p><strong>Bot:</strong> This is a demo response.</p>`;
+    input.value = '';
+  });
+</script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<h1>Explore Destinations</h1>
+<p>Discover regions, categories, and cultural landmarks across India.</p>
+
+<div class="filter-bar">
+  <input type="text" placeholder="Search destinations..." />
+  <select>
+    <option value="all">All</option>
+    <option value="popular">Popular</option>
+    <option value="history">History</option>
+    <option value="spiritual">Spiritual</option>
+  </select>
+</div>
+
+<div class="destination-grid">
+  <!-- Loop through destinations here -->
+  <div class="destination-card">
+    <img src="/public/images/sample.jpg" alt="Place" />
+    <h3>Hampi</h3>
+    <p>Historical site with rich heritage and temples.</p>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
+
