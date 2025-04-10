@@ -1,4 +1,4 @@
-const Destination = require('../models/Destination');
+const Destination = require('../models/Destinations');
 
 // Fetch all destinations with virtual tour links
 async function getVirtualTours() {

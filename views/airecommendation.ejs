@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+
+<h1>AI Recommendations</h1>
+<ul>
+  <% suggestions.forEach(place => { %>
+    <li><%= place %></li>
+  <% }) %>
+</ul>
+
+<%- include('partials/footer') %>
