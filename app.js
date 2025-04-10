@@ -21,20 +21,23 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Routes from route files
-app.use('/', require('./routes/index'));
+//app.use('/', require('./routes/index'));
 app.use('/', require('./routes/auth'));
 app.use('/explore', require('./routes/explore'));
 app.use('/virtual-tours', require('./routes/virtualTours'));
 app.use('/itinerary', require('./routes/itinerary'));
 app.use('/chatbot', require('./routes/chatbot'));
 app.use('/', require('./routes/airecommendation')); // Assuming the file is routes/ai.js
+app.use('/', require('./routes/startPlanning'));
+
+app.use('/', require('./routes/index'));
 
 
-// ✅ Your startPlanning route
-app.get('/startPlanning', (req, res) => {
-  console.log("✅ /startPlanning route hit");
-  res.render('startPlanning.ejs', { title: 'Plan Your Journey' });
-});
+// // ✅ Your startPlanning route
+// app.get('/startPlanning', (req, res) => {
+//   console.log("✅ /startPlanning route hit");
+//   res.render('startPlanning.ejs', { title: 'Plan Your Journey' });
+// });
 
 app.get('/test-page', (req, res) => {
   console.log("✅ /test-page route hit");
