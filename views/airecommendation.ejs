@@ -1,10 +1,15 @@
 <%- include('partials/header') %>
 
-<h1>AI Recommendations</h1>
+<h1><%= title %></h1>
+
 <ul>
-  <% suggestions.forEach(place => { %>
-    <li><%= place %></li>
-  <% }) %>
+  <% if (suggestions.length === 0) { %>
+    <li>No recommendations found. Try changing preferences.</li>
+  <% } else { %>
+    <% suggestions.forEach(place => { %>
+      <li><%= place %></li>
+    <% }) %>
+  <% } %>
 </ul>
 
 <%- include('partials/footer') %>
