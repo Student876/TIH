@@ -27,7 +27,7 @@ app.use('/explore', require('./routes/explore'));
 app.use('/virtual-tours', require('./routes/virtualTours'));
 app.use('/itinerary', require('./routes/itinerary'));
 app.use('/chatbot', require('./routes/chatbot'));
-app.use('/', require('./routes/airecommendation')); // Assuming the file is routes/ai.js
+app.use('/', require('./routes/airecommendation')); 
 app.use('/', require('./routes/startPlanning'));
 
 app.use('/', require('./routes/index'));

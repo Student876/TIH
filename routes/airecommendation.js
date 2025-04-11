@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const recommendPlaces = require('../modules/airecommendation');
 
-// GET AI Recommendations page
-router.get('/airecommendation', (req, res) => {
-  const preferences = req.query; // ?category=spiritual&region=south
+// ✅ Make sure the path matches exactly
+router.get('/ai-recommendations', (req, res) => {
+  const preferences = req.query;
   const suggestions = recommendPlaces(preferences);
 
   res.render('airecommendation', {
